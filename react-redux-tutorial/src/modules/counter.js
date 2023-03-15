@@ -7,8 +7,13 @@ export const increase = () => ({type : INCREASE});
 export const decrease = () => ({type : DECREASE});
 
 //초기 상태 및 리듀서 함수 만들기
+
+const initialState = {
+  number: 0
+};
+
 function counter(state = initialState, action) {
-  switch(action, type) {
+  switch(action.type) {
     case INCREASE:
       return {
         number: state.number +1
